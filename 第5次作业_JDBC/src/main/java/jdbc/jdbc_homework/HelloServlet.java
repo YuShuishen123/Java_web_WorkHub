@@ -10,7 +10,7 @@ public class HelloServlet extends HttpServlet {
     private String message;
 
     public void init() {
-        message = "Hello World!";
+        message = "teacher表查询资源路径： /Teachers";
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
