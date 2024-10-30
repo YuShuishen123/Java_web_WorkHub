@@ -64,12 +64,11 @@ public class CRUD_demo {
                 System.out.println("开始执行插入功能");
                 conn.setAutoCommit(false);
                 System.out.println("关闭事务自动提交");
-                ps = conn.prepareStatement("insert into teacher values(?,?,?,?)");
+                ps = conn.prepareStatement("insert into teacher(name,course,birthday) values(?,?,?)");
                 // 设置插入数据
-                ps.setInt(1,7);
-                ps.setString(2,"张三");
-                ps.setString(3,"化学");
-                ps.setDate(4, Date.valueOf("2024-10-28"));
+                ps.setString(1,"张三");
+                ps.setString(2,"化学");
+                ps.setDate(3, Date.valueOf("2024-10-28"));
                 // 执行插入
                 ps.executeUpdate();
                 // 手动提交事务
@@ -115,29 +114,29 @@ public class CRUD_demo {
                 conn.setAutoCommit(true);
             }
 
-            // 删除功能的实现
-            try{
-                System.out.println("------------------------------------------------------------------");
-                System.out.println("开始执行删除功能");
-                conn.setAutoCommit(false); //关闭自动提交
-                System.out.println("关闭自动事务提交");
-                ps = conn.prepareStatement("delete from teacher where name=?");
-                ps.setString(1,"小王");   //设置信息
-                ps.executeUpdate();  // 执行删除
-                conn.commit(); //提交事务
-                System.out.println("进行删除事务提交");
-            }catch(SQLException e){
-                conn.rollback();
-                System.out.println("捕获到删除sql异常，回滚数据");
-                throw new CRUDException("删除(sql)",e);
-
-            }catch (Exception e){
-                System.out.println("删除部分java错误信息");  // 验证异常来源
-                throw new CRUDException("删除(java)",e);
-            }finally {
-                System.out.println("恢复事务自动提交");
-                conn.setAutoCommit(true);
-            }
+//            // 删除功能的实现
+//            try{
+//                System.out.println("------------------------------------------------------------------");
+//                System.out.println("开始执行删除功能");
+//                conn.setAutoCommit(false); //关闭自动提交
+//                System.out.println("关闭自动事务提交");
+//                ps = conn.prepareStatement("delete from teacher where id > ?");
+//                ps.setInt(1,3);   //设置信息
+//                ps.executeUpdate();  // 执行删除
+//                conn.commit(); //提交事务
+//                System.out.println("进行删除事务提交");
+//            }catch(SQLException e){
+//                conn.rollback();
+//                System.out.println("捕获到删除sql异常，回滚数据");
+//                throw new CRUDException("删除(sql)",e);
+//
+//            }catch (Exception e){
+//                System.out.println("删除部分java错误信息");  // 验证异常来源
+//                throw new CRUDException("删除(java)",e);
+//            }finally {
+//                System.out.println("恢复事务自动提交");
+//                conn.setAutoCommit(true);
+//            }
 
             // 批量插入功能的实现
             try{
@@ -145,17 +144,16 @@ public class CRUD_demo {
                 System.out.println("开始批量插入功能");
                 conn.setAutoCommit(false);
                 System.out.println("关闭事务自动提交");
-                ps = conn.prepareStatement("insert into teacher values(?,?,?,?)");
+                ps = conn.prepareStatement("insert into teacher(name,course,birthday) values(?,?,?)");
                 // 通过循环设置参数
                 // 循环开始前设置起始日期
                 LocalDate startDate = LocalDate.of(2024, 10, 28);
-                for (int i = 601; i < 1100; i++) {
-                    ps.setInt(1,i);
-                    ps.setString(2,"教师"+i + "号"); // 名字+编号
-                    ps.setString(3,"课程"+i);
+                for (int i = 1; i < 1000; i++) {
+                    ps.setString(1,"教师"+i + "号"); // 名字+编号
+                    ps.setString(2,"课程"+i);
                     // 设置第4个参数：日期，使用LocalDate加上i来实现增长
                     LocalDate currentDate = startDate.plusDays(i); // 当前日期加上i天
-                    ps.setDate(4, Date.valueOf(currentDate)); // 转换为java.sql.Date并设置
+                    ps.setDate(3, Date.valueOf(currentDate)); // 转换为java.sql.Date并设置
                     // 添加到批处理
                     ps.addBatch();
                     if (i % 100 == 0) { // 每5条记录执行一次批处理
@@ -189,7 +187,7 @@ public class CRUD_demo {
                 System.out.println("关闭自动事务提交");
                 // 指定结果集类型 ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY
                 ps = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-                ps.setInt(1, 100); // 设置参数
+                ps.setInt(1,0); // 设置参数
                 // 使用ResultSet的方法来移动光标。执行查询
                 rs = ps.executeQuery();
                 // 移动到倒数第二行
