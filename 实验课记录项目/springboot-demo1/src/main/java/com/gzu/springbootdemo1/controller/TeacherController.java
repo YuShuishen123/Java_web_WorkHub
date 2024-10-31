@@ -20,7 +20,7 @@ public class TeacherController {
     private static final Logger logger = LoggerFactory.getLogger(TeacherController.class);
 
     // 查询全部教师
-    @GetMapping("/select_t")
+    @GetMapping("/teachers")
     public Result queryAllTeachers(){
         Result result = new Result();
         try{
@@ -38,7 +38,7 @@ public class TeacherController {
     }
 
     // 根据id查询
-    @GetMapping("/select_t/{id}")
+    @GetMapping("/teachers/{id}")
     public Result findById(@PathVariable int id){
         Result result = new Result();
         try{
@@ -62,7 +62,7 @@ public class TeacherController {
     }
 
     // 根据iD删除
-    @PutMapping("/delete_t/{id}")
+    @PutMapping("/teachers/delete/{id}")
     public Result deleteById(@PathVariable int id){
         Result result = new Result();
         try{
@@ -85,7 +85,7 @@ public class TeacherController {
     }
 
     // 插入教师
-    @PostMapping("/insert_t")
+    @PostMapping("/teachers/insert")
     public Result add(@RequestBody Teacher teacher){
         Integer id = teacher.getId();
         Result result = new Result();
@@ -118,7 +118,7 @@ public class TeacherController {
     }
 
     // 更新教师信息
-    @PutMapping("/update_t")
+    @PutMapping("/teachers/update")
     public Result update(@RequestBody Teacher teacher){
         Integer generatedId = teacher.getId();
         Result result = new Result();
