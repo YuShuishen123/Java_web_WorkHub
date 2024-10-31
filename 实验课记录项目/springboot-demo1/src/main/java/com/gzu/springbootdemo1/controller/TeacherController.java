@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+@SuppressWarnings("SpringJavaAutowiredFieldsWarningInspection")
 @RestController  // 声明该类为控制器
 @RequestMapping("/api") // 路径前缀
 public class TeacherController {
@@ -39,7 +40,6 @@ public class TeacherController {
     // 根据id查询
     @GetMapping("/select_t/{id}")
     public Result findById(@PathVariable int id){
-        Integer generatedId = id;
         Result result = new Result();
         try{
             if(teacherService.findById(id)==null){
@@ -64,7 +64,6 @@ public class TeacherController {
     // 根据iD删除
     @PutMapping("/delete_t/{id}")
     public Result deleteById(@PathVariable int id){
-        Integer generatedId = id;
         Result result = new Result();
         try{
             if(teacherService.findById(id)==null) {

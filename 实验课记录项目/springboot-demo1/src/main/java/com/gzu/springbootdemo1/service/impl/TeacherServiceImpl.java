@@ -11,6 +11,7 @@ import java.util.List;
 
 
 // 该类负责实现TeacherService接口中声明的服务
+@SuppressWarnings("SpringJavaAutowiredFieldsWarningInspection")
 @Service
 public class TeacherServiceImpl implements TeacherService {
     // 业务层调用持久层
