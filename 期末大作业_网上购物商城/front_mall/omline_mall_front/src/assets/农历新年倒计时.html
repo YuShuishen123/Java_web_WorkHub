@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>2025春节倒计时</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff4d4f, #ff7875);
+      color: #fff;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      padding: 20px;
+      margin: 0 auto;
+    }
+
+    .title {
+      font-size: clamp(20px, 5vw, 28px);
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      font-weight: 600;
+    }
+
+    .subtitle {
+      font-size: clamp(16px, 4vw, 20px);
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+
+    .countdown {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0 10px;
+    }
+
+    .countdown-item {
+      background: rgba(255, 255, 255, 0.2);
+      padding: clamp(10px, 3vw, 20px);
+      border-radius: 12px;
+      flex: 0 0 auto;
+      width: clamp(70px, 20vw, 120px);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .number {
+      font-size: clamp(24px, 6vw, 40px);
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .label {
+      font-size: clamp(12px, 3vw, 16px);
+      opacity: 0.9;
+    }
+
+    @media screen and (max-width: 360px) {
+      .countdown {
+        gap: 8px;
+      }
+
+      .countdown-item {
+        width: calc(50% - 10px);
+        margin-bottom: 10px;
+      }
+    }
+
+    @supports not (backdrop-filter: blur(5px)) {
+      .countdown-item {
+        background: rgba(255, 255, 255, 0.3);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="title">2025年春节倒计时</h1>
+    <div class="subtitle">距离除夕还有</div>
+    <div class="countdown">
+      <div class="countdown-item">
+        <div class="number" id="days">00</div>
+        <div class="label">天</div>
+      </div>
+      <div class="countdown-item">
+        <div class="number" id="hours">00</div>
+        <div class="label">小时</div>
+      </div>
+      <div class="countdown-item">
+        <div class="number" id="minutes">00</div>
+        <div class="label">分钟</div>
+      </div>
+      <div class="countdown-item">
+        <div class="number" id="seconds">00</div>
+        <div class="label">秒</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function updateCountdown() {
+      const newYear = new Date('2025-01-28T00:00:00+08:00'); // 添加北京时间时区
+      const now = new Date();
+      const diff = newYear.getTime() - now.getTime();
+
+      if (diff < 0) {
+        ['days', 'hours', 'minutes', 'seconds'].forEach(id => {
+          document.getElementById(id).textContent = '00';
+        });
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('days').textContent = String(days).padStart(2, '0');
+      document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    }
+
+    // 页面加载完成后立即执行一次
+    document.addEventListener('DOMContentLoaded', function () {
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    });
+  </script>
+</body>
+
+</html>

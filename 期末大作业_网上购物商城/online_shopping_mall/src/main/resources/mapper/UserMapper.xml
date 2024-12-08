@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="java_web.online_shopping_mall.mapper.UserMapper">
+
+    <!-- 根据用户ID动态更新用户信息 -->
+    <update id="updateUserByUserID">
+        UPDATE users
+        <set>
+            <if test="userUpdateDTO.password != null"> password = #{userUpdateDTO.password}, </if>
+            <if test="userUpdateDTO.email != null"> email = #{userUpdateDTO.email}, </if>
+            <if test="userUpdateDTO.phone != null"> phone = #{userUpdateDTO.phone}, </if>
+            <if test="userUpdateDTO.nickname != null"> nickname = #{userUpdateDTO.nickname}, </if>
+            updatedtime = NOW()
+        </set>
+        WHERE id = #{userId}
+    </update>
+
+
+</mapper>

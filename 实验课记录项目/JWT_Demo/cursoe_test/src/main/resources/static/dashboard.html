@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>仪表盘 - 在线教育平台</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">在线教育平台</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/dashboard.html">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/courses.html">课程</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/exams.html">考试</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/profile.html">个人资料</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="logoutBtn">退出</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>欢迎回来，<span id="username"></span></h2>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">我的课程</h5>
+                        <p class="card-text">查看已选课程和学习进度</p>
+                        <a href="/courses.html" class="btn btn-primary">进入课程</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">考试中心</h5>
+                        <p class="card-text">参与考试和查看成绩</p>
+                        <a href="/exams.html" class="btn btn-primary">进入考试</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">个人资料</h5>
+                        <p class="card-text">修改个人信息和密码</p>
+                        <a href="/profile.html" class="btn btn-primary">查看资料</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // 获取用户信息
+            $.get('/api/user/profile', function(response) {
+                $('#username').text(response.username);
+            });
+
+            // 退出登录
+            $('#logoutBtn').click(function(e) {
+                e.preventDefault();
+                $.post('/api/auth/logout', function() {
+                    window.location.href = '/login.html';
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

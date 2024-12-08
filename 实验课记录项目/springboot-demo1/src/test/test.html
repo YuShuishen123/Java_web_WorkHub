@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test POST Request</title>
+</head>
+<body>
+<script>
+    async function addTeacher() {
+        const url = 'http://localhost:8080/api/insert_teacher';
+        const data = {
+            name: '张三',
+            age: 30,
+            course: "数学",
+            birthday: '2024-11-30'
+        };
+
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+        console.log(result);
+    }
+
+    addTeacher();
+</script>
+</body>
+</html>

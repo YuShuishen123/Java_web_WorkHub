@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jdbc.cursoe_test.mapper.CourseSelectionMapper">
+    <insert id="insert">
+        INSERT INTO course_selections (course_id, student_id)
+        VALUES (#{courseId}, #{studentId})
+    </insert>
+    
+    <delete id="delete">
+        DELETE FROM course_selections 
+        WHERE course_id = #{courseId} AND student_id = #{studentId}
+    </delete>
+    
+    <select id="exists" resultType="boolean">
+        SELECT COUNT(*) > 0
+        FROM course_selections
+        WHERE course_id = #{courseId} AND student_id = #{studentId}
+    </select>
+</mapper> 

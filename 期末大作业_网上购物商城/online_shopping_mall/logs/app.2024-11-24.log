@@ -1,0 +1,144 @@
+日志：12:59:36.571 [background-preinit] INFO  o.h.validator.internal.util.Version --- HV000001: Hibernate Validator 8.0.1.Final
+日志：12:59:36.625 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- Starting OnlineShoppingMallApplication using Java 17.0.6 with PID 5476 (E:\NewDeskope\24-25java-web\24-25Javaweb_work\Java_web_WorkHub\期末大作业_网上购物商城\online_shopping_mall\target\classes started by Yu'S'hui'shen in E:\NewDeskope\24-25java-web\24-25Javaweb_work\Java_web_WorkHub\期末大作业_网上购物商城\online_shopping_mall)
+日志：12:59:36.626 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- No active profile set, falling back to 1 default profile: "default"
+日志：12:59:37.825 [restartedMain] INFO  o.a.c.core.AprLifecycleListener --- Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+日志：12:59:37.843 [restartedMain] INFO  o.a.c.core.AprLifecycleListener --- OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+日志：12:59:37.852 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol --- Initializing ProtocolHandler ["http-nio-8080"]
+日志：12:59:37.855 [restartedMain] INFO  o.a.catalina.core.StandardService --- Starting service [Tomcat]
+日志：12:59:37.855 [restartedMain] INFO  o.a.catalina.core.StandardEngine --- Starting Servlet engine: [Apache Tomcat/10.1.28]
+日志：12:59:37.906 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] --- Initializing Spring embedded WebApplicationContext
+日志：12:59:38.186 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper --- HHH000204: Processing PersistenceUnitInfo [name: default]
+日志：12:59:38.255 [restartedMain] INFO  org.hibernate.Version --- HHH000412: Hibernate ORM core version 6.5.2.Final
+日志：12:59:38.291 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator --- HHH000026: Second-level cache disabled
+日志：12:59:38.597 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Starting...
+日志：12:59:38.988 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool --- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@d46faf5
+日志：12:59:38.990 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Start completed.
+日志：12:59:39.072 [restartedMain] WARN  org.hibernate.orm.deprecation --- HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+日志：12:59:39.073 [restartedMain] WARN  org.hibernate.orm.deprecation --- HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+日志：12:59:39.793 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator --- HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+日志：12:59:39.981 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration --- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+日志：12:59:40.317 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol --- Starting ProtocolHandler ["http-nio-8080"]
+日志：12:59:40.342 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- Started OnlineShoppingMallApplication in 4.183 seconds (process running for 4.908)
+日志：13:38:26.154 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] --- Initializing Spring DispatcherServlet 'dispatcherServlet'
+日志：14:01:21.977 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Shutdown initiated...
+日志：14:01:21.981 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Shutdown completed.
+日志：14:01:26.122 [background-preinit] INFO  o.h.validator.internal.util.Version --- HV000001: Hibernate Validator 8.0.1.Final
+日志：14:01:26.162 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- Starting OnlineShoppingMallApplication using Java 17.0.6 with PID 8644 (E:\NewDeskope\24-25java-web\24-25Javaweb_work\Java_web_WorkHub\期末大作业_网上购物商城\online_shopping_mall\target\classes started by Yu'S'hui'shen in E:\NewDeskope\24-25java-web\24-25Javaweb_work\Java_web_WorkHub\期末大作业_网上购物商城\online_shopping_mall)
+日志：14:01:26.164 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- No active profile set, falling back to 1 default profile: "default"
+日志：14:01:27.401 [restartedMain] INFO  o.a.c.core.AprLifecycleListener --- Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+日志：14:01:27.405 [restartedMain] INFO  o.a.c.core.AprLifecycleListener --- OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+日志：14:01:27.412 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol --- Initializing ProtocolHandler ["http-nio-8080"]
+日志：14:01:27.415 [restartedMain] INFO  o.a.catalina.core.StandardService --- Starting service [Tomcat]
+日志：14:01:27.415 [restartedMain] INFO  o.a.catalina.core.StandardEngine --- Starting Servlet engine: [Apache Tomcat/10.1.28]
+日志：14:01:27.464 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] --- Initializing Spring embedded WebApplicationContext
+日志：14:01:27.718 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper --- HHH000204: Processing PersistenceUnitInfo [name: default]
+日志：14:01:27.765 [restartedMain] INFO  org.hibernate.Version --- HHH000412: Hibernate ORM core version 6.5.2.Final
+日志：14:01:27.794 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator --- HHH000026: Second-level cache disabled
+日志：14:01:28.054 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Starting...
+日志：14:01:28.362 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool --- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5fc0c284
+日志：14:01:28.364 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Start completed.
+日志：14:01:28.400 [restartedMain] WARN  org.hibernate.orm.deprecation --- HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+日志：14:01:28.400 [restartedMain] WARN  org.hibernate.orm.deprecation --- HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+日志：14:01:29.058 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator --- HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+日志：14:01:29.219 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration --- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+日志：14:01:29.536 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol --- Starting ProtocolHandler ["http-nio-8080"]
+日志：14:01:29.567 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- Started OnlineShoppingMallApplication in 3.887 seconds (process running for 4.57)
+日志：14:01:43.044 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] --- Initializing Spring DispatcherServlet 'dispatcherServlet'
+日志：14:08:40.593 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Shutdown initiated...
+日志：14:08:40.599 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Shutdown completed.
+日志：14:08:44.320 [background-preinit] INFO  o.h.validator.internal.util.Version --- HV000001: Hibernate Validator 8.0.1.Final
+日志：14:08:44.354 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- Starting OnlineShoppingMallApplication using Java 17.0.6 with PID 18072 (E:\NewDeskope\24-25java-web\24-25Javaweb_work\Java_web_WorkHub\期末大作业_网上购物商城\online_shopping_mall\target\classes started by Yu'S'hui'shen in E:\NewDeskope\24-25java-web\24-25Javaweb_work\Java_web_WorkHub\期末大作业_网上购物商城\online_shopping_mall)
+日志：14:08:44.355 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- No active profile set, falling back to 1 default profile: "default"
+日志：14:08:45.465 [restartedMain] INFO  o.a.c.core.AprLifecycleListener --- Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+日志：14:08:45.469 [restartedMain] INFO  o.a.c.core.AprLifecycleListener --- OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+日志：14:08:45.478 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol --- Initializing ProtocolHandler ["http-nio-8080"]
+日志：14:08:45.482 [restartedMain] INFO  o.a.catalina.core.StandardService --- Starting service [Tomcat]
+日志：14:08:45.482 [restartedMain] INFO  o.a.catalina.core.StandardEngine --- Starting Servlet engine: [Apache Tomcat/10.1.28]
+日志：14:08:45.538 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] --- Initializing Spring embedded WebApplicationContext
+日志：14:08:45.804 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper --- HHH000204: Processing PersistenceUnitInfo [name: default]
+日志：14:08:45.858 [restartedMain] INFO  org.hibernate.Version --- HHH000412: Hibernate ORM core version 6.5.2.Final
+日志：14:08:45.892 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator --- HHH000026: Second-level cache disabled
+日志：14:08:46.160 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Starting...
+日志：14:08:46.449 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool --- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18604595
+日志：14:08:46.451 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Start completed.
+日志：14:08:46.486 [restartedMain] WARN  org.hibernate.orm.deprecation --- HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+日志：14:08:46.487 [restartedMain] WARN  org.hibernate.orm.deprecation --- HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+日志：14:08:47.181 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator --- HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+日志：14:08:47.343 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration --- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+日志：14:08:47.738 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol --- Starting ProtocolHandler ["http-nio-8080"]
+日志：14:08:47.767 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- Started OnlineShoppingMallApplication in 3.825 seconds (process running for 4.435)
+日志：14:08:54.083 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] --- Initializing Spring DispatcherServlet 'dispatcherServlet'
+日志：14:11:11.730 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Shutdown initiated...
+日志：14:11:11.735 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Shutdown completed.
+日志：14:11:15.332 [background-preinit] INFO  o.h.validator.internal.util.Version --- HV000001: Hibernate Validator 8.0.1.Final
+日志：14:11:15.366 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- Starting OnlineShoppingMallApplication using Java 17.0.6 with PID 8968 (E:\NewDeskope\24-25java-web\24-25Javaweb_work\Java_web_WorkHub\期末大作业_网上购物商城\online_shopping_mall\target\classes started by Yu'S'hui'shen in E:\NewDeskope\24-25java-web\24-25Javaweb_work\Java_web_WorkHub\期末大作业_网上购物商城\online_shopping_mall)
+日志：14:11:15.367 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- No active profile set, falling back to 1 default profile: "default"
+日志：14:11:16.529 [restartedMain] INFO  o.a.c.core.AprLifecycleListener --- Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+日志：14:11:16.533 [restartedMain] INFO  o.a.c.core.AprLifecycleListener --- OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+日志：14:11:16.541 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol --- Initializing ProtocolHandler ["http-nio-8080"]
+日志：14:11:16.543 [restartedMain] INFO  o.a.catalina.core.StandardService --- Starting service [Tomcat]
+日志：14:11:16.544 [restartedMain] INFO  o.a.catalina.core.StandardEngine --- Starting Servlet engine: [Apache Tomcat/10.1.28]
+日志：14:11:16.589 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] --- Initializing Spring embedded WebApplicationContext
+日志：14:11:16.837 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper --- HHH000204: Processing PersistenceUnitInfo [name: default]
+日志：14:11:16.884 [restartedMain] INFO  org.hibernate.Version --- HHH000412: Hibernate ORM core version 6.5.2.Final
+日志：14:11:16.913 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator --- HHH000026: Second-level cache disabled
+日志：14:11:17.166 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Starting...
+日志：14:11:17.404 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool --- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@635fa4f0
+日志：14:11:17.405 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Start completed.
+日志：14:11:17.440 [restartedMain] WARN  org.hibernate.orm.deprecation --- HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+日志：14:11:17.441 [restartedMain] WARN  org.hibernate.orm.deprecation --- HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+日志：14:11:18.100 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator --- HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+日志：14:11:18.253 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration --- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+日志：14:11:18.588 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol --- Starting ProtocolHandler ["http-nio-8080"]
+日志：14:11:18.626 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- Started OnlineShoppingMallApplication in 3.675 seconds (process running for 4.315)
+日志：14:11:21.373 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] --- Initializing Spring DispatcherServlet 'dispatcherServlet'
+日志：14:13:09.988 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Shutdown initiated...
+日志：14:13:09.994 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Shutdown completed.
+日志：14:13:13.276 [background-preinit] INFO  o.h.validator.internal.util.Version --- HV000001: Hibernate Validator 8.0.1.Final
+日志：14:13:13.314 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- Starting OnlineShoppingMallApplication using Java 17.0.6 with PID 15576 (E:\NewDeskope\24-25java-web\24-25Javaweb_work\Java_web_WorkHub\期末大作业_网上购物商城\online_shopping_mall\target\classes started by Yu'S'hui'shen in E:\NewDeskope\24-25java-web\24-25Javaweb_work\Java_web_WorkHub\期末大作业_网上购物商城\online_shopping_mall)
+日志：14:13:13.315 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- No active profile set, falling back to 1 default profile: "default"
+日志：14:13:14.414 [restartedMain] INFO  o.a.c.core.AprLifecycleListener --- Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+日志：14:13:14.418 [restartedMain] INFO  o.a.c.core.AprLifecycleListener --- OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+日志：14:13:14.424 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol --- Initializing ProtocolHandler ["http-nio-8080"]
+日志：14:13:14.427 [restartedMain] INFO  o.a.catalina.core.StandardService --- Starting service [Tomcat]
+日志：14:13:14.427 [restartedMain] INFO  o.a.catalina.core.StandardEngine --- Starting Servlet engine: [Apache Tomcat/10.1.28]
+日志：14:13:14.473 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] --- Initializing Spring embedded WebApplicationContext
+日志：14:13:14.702 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper --- HHH000204: Processing PersistenceUnitInfo [name: default]
+日志：14:13:14.749 [restartedMain] INFO  org.hibernate.Version --- HHH000412: Hibernate ORM core version 6.5.2.Final
+日志：14:13:14.779 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator --- HHH000026: Second-level cache disabled
+日志：14:13:15.037 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Starting...
+日志：14:13:15.288 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool --- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ae5d679
+日志：14:13:15.290 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Start completed.
+日志：14:13:15.323 [restartedMain] WARN  org.hibernate.orm.deprecation --- HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+日志：14:13:15.324 [restartedMain] WARN  org.hibernate.orm.deprecation --- HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+日志：14:13:15.987 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator --- HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+日志：14:13:16.136 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration --- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+日志：14:13:16.471 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol --- Starting ProtocolHandler ["http-nio-8080"]
+日志：14:13:16.499 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- Started OnlineShoppingMallApplication in 3.61 seconds (process running for 4.218)
+日志：14:13:18.083 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] --- Initializing Spring DispatcherServlet 'dispatcherServlet'
+日志：14:15:00.279 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Shutdown initiated...
+日志：14:15:00.285 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Shutdown completed.
+日志：14:15:03.805 [background-preinit] INFO  o.h.validator.internal.util.Version --- HV000001: Hibernate Validator 8.0.1.Final
+日志：14:15:03.840 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- Starting OnlineShoppingMallApplication using Java 17.0.6 with PID 12196 (E:\NewDeskope\24-25java-web\24-25Javaweb_work\Java_web_WorkHub\期末大作业_网上购物商城\online_shopping_mall\target\classes started by Yu'S'hui'shen in E:\NewDeskope\24-25java-web\24-25Javaweb_work\Java_web_WorkHub\期末大作业_网上购物商城\online_shopping_mall)
+日志：14:15:03.840 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- No active profile set, falling back to 1 default profile: "default"
+日志：14:15:04.930 [restartedMain] INFO  o.a.c.core.AprLifecycleListener --- Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+日志：14:15:04.934 [restartedMain] INFO  o.a.c.core.AprLifecycleListener --- OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+日志：14:15:04.941 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol --- Initializing ProtocolHandler ["http-nio-8080"]
+日志：14:15:04.944 [restartedMain] INFO  o.a.catalina.core.StandardService --- Starting service [Tomcat]
+日志：14:15:04.944 [restartedMain] INFO  o.a.catalina.core.StandardEngine --- Starting Servlet engine: [Apache Tomcat/10.1.28]
+日志：14:15:05.000 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] --- Initializing Spring embedded WebApplicationContext
+日志：14:15:05.240 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper --- HHH000204: Processing PersistenceUnitInfo [name: default]
+日志：14:15:05.287 [restartedMain] INFO  org.hibernate.Version --- HHH000412: Hibernate ORM core version 6.5.2.Final
+日志：14:15:05.317 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator --- HHH000026: Second-level cache disabled
+日志：14:15:05.568 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Starting...
+日志：14:15:05.834 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool --- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3784ad87
+日志：14:15:05.836 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Start completed.
+日志：14:15:05.877 [restartedMain] WARN  org.hibernate.orm.deprecation --- HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+日志：14:15:05.878 [restartedMain] WARN  org.hibernate.orm.deprecation --- HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+日志：14:15:06.649 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator --- HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+日志：14:15:06.833 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration --- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+日志：14:15:07.225 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol --- Starting ProtocolHandler ["http-nio-8080"]
+日志：14:15:07.252 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- Started OnlineShoppingMallApplication in 3.823 seconds (process running for 4.404)
+日志：14:15:08.579 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] --- Initializing Spring DispatcherServlet 'dispatcherServlet'
+日志：14:15:19.757 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Shutdown initiated...
+日志：14:15:19.763 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Shutdown completed.

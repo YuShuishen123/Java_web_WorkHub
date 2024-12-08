@@ -1,0 +1,345 @@
+日志：00:55:45.852 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Shutdown initiated...
+日志：00:55:45.928 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Shutdown completed.
+日志：07:37:42.347 [background-preinit] INFO  o.h.validator.internal.util.Version --- HV000001: Hibernate Validator 8.0.1.Final
+日志：07:37:42.406 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- Starting OnlineShoppingMallApplication using Java 17.0.6 with PID 19620 (E:\NewDeskope\24-25java-web\24-25Javaweb_work\Java_web_WorkHub\期末大作业_网上购物商城\online_shopping_mall\target\classes started by Yu'S'hui'shen in E:\NewDeskope\24-25java-web\24-25Javaweb_work\Java_web_WorkHub\期末大作业_网上购物商城\online_shopping_mall)
+日志：07:37:42.407 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- No active profile set, falling back to 1 default profile: "default"
+日志：07:37:44.070 [restartedMain] INFO  o.a.c.core.AprLifecycleListener --- Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+日志：07:37:44.090 [restartedMain] INFO  o.a.c.core.AprLifecycleListener --- OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+日志：07:37:44.099 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol --- Initializing ProtocolHandler ["http-nio-8080"]
+日志：07:37:44.102 [restartedMain] INFO  o.a.catalina.core.StandardService --- Starting service [Tomcat]
+日志：07:37:44.102 [restartedMain] INFO  o.a.catalina.core.StandardEngine --- Starting Servlet engine: [Apache Tomcat/10.1.28]
+日志：07:37:44.161 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] --- Initializing Spring embedded WebApplicationContext
+日志：07:37:44.519 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper --- HHH000204: Processing PersistenceUnitInfo [name: default]
+日志：07:37:44.599 [restartedMain] INFO  org.hibernate.Version --- HHH000412: Hibernate ORM core version 6.5.2.Final
+日志：07:37:44.638 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator --- HHH000026: Second-level cache disabled
+日志：07:37:44.968 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Starting...
+日志：07:37:45.400 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool --- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f447cfc
+日志：07:37:45.401 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Start completed.
+日志：07:37:45.487 [restartedMain] WARN  org.hibernate.orm.deprecation --- HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+日志：07:37:45.488 [restartedMain] WARN  org.hibernate.orm.deprecation --- HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+日志：07:37:46.300 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator --- HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+日志：07:37:46.528 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration --- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+日志：07:37:47.356 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol --- Starting ProtocolHandler ["http-nio-8080"]
+日志：07:37:47.383 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- Started OnlineShoppingMallApplication in 5.533 seconds (process running for 6.49)
+日志：07:37:50.654 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] --- Initializing Spring DispatcherServlet 'dispatcherServlet'
+日志：08:22:56.767 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Shutdown initiated...
+日志：08:22:56.775 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Shutdown completed.
+日志：08:23:02.210 [background-preinit] INFO  o.h.validator.internal.util.Version --- HV000001: Hibernate Validator 8.0.1.Final
+日志：08:23:02.260 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- Starting OnlineShoppingMallApplication using Java 17.0.6 with PID 24828 (E:\NewDeskope\24-25java-web\24-25Javaweb_work\Java_web_WorkHub\期末大作业_网上购物商城\online_shopping_mall\target\classes started by Yu'S'hui'shen in E:\NewDeskope\24-25java-web\24-25Javaweb_work\Java_web_WorkHub\期末大作业_网上购物商城\online_shopping_mall)
+日志：08:23:02.261 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- No active profile set, falling back to 1 default profile: "default"
+日志：08:23:03.907 [restartedMain] INFO  o.a.c.core.AprLifecycleListener --- Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+日志：08:23:03.913 [restartedMain] INFO  o.a.c.core.AprLifecycleListener --- OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+日志：08:23:03.921 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol --- Initializing ProtocolHandler ["http-nio-8080"]
+日志：08:23:03.924 [restartedMain] INFO  o.a.catalina.core.StandardService --- Starting service [Tomcat]
+日志：08:23:03.924 [restartedMain] INFO  o.a.catalina.core.StandardEngine --- Starting Servlet engine: [Apache Tomcat/10.1.28]
+日志：08:23:03.979 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] --- Initializing Spring embedded WebApplicationContext
+日志：08:23:04.324 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper --- HHH000204: Processing PersistenceUnitInfo [name: default]
+日志：08:23:04.401 [restartedMain] INFO  org.hibernate.Version --- HHH000412: Hibernate ORM core version 6.5.2.Final
+日志：08:23:04.440 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator --- HHH000026: Second-level cache disabled
+日志：08:23:04.783 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Starting...
+日志：08:23:05.160 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool --- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ab943ae
+日志：08:23:05.162 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Start completed.
+日志：08:23:05.218 [restartedMain] WARN  org.hibernate.orm.deprecation --- HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+日志：08:23:05.219 [restartedMain] WARN  org.hibernate.orm.deprecation --- HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+日志：08:23:06.047 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator --- HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+日志：08:23:06.220 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration --- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+日志：08:23:06.962 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol --- Starting ProtocolHandler ["http-nio-8080"]
+日志：08:23:06.991 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- Started OnlineShoppingMallApplication in 5.257 seconds (process running for 6.137)
+日志：08:23:15.253 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] --- Initializing Spring DispatcherServlet 'dispatcherServlet'
+日志：09:00:37.464 [http-nio-8080-exec-1] INFO  o.a.coyote.http11.Http11Processor --- Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in the request target [/products?page=1&size=[object%20Object] ]. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:482)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:257)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+日志：17:25:39.856 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool --- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m25s485ms572µs100ns).
+日志：17:28:42.312 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool --- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m2s455ms930µs400ns).
+日志：17:40:36.665 [http-nio-8080-exec-4] ERROR j.o.exception.GlobalExceptionHandler --- 服务器发生错误: Request method 'GET' is not supported
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:267)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:441)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:382)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:127)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:68)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:507)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at java_web.online_shopping_mall.filter.JwtFilter.doFilterInternal(JwtFilter.java:61)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+日志：17:40:36.670 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver --- Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+日志：17:51:24.848 [http-nio-8080-exec-3] ERROR j.o.exception.GlobalExceptionHandler --- 服务器发生错误: Request method 'GET' is not supported
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:267)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:441)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:382)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:127)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:68)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:507)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at java_web.online_shopping_mall.filter.JwtFilter.doFilterInternal(JwtFilter.java:61)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+日志：17:51:24.885 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver --- Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+日志：17:51:47.852 [http-nio-8080-exec-5] ERROR j.o.exception.GlobalExceptionHandler --- 服务器发生错误: Request method 'GET' is not supported
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:267)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:441)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:382)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:127)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:68)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:507)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at java_web.online_shopping_mall.filter.JwtFilter.doFilterInternal(JwtFilter.java:61)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+日志：17:51:47.853 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver --- Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+日志：17:53:33.213 [http-nio-8080-exec-7] ERROR j.o.exception.GlobalExceptionHandler --- 服务器发生错误: Request method 'GET' is not supported
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:267)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:441)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:382)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:127)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:68)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:507)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1284)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1065)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at java_web.online_shopping_mall.filter.JwtFilter.doFilterInternal(JwtFilter.java:61)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+日志：17:53:33.214 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver --- Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+日志：21:06:47.919 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Shutdown initiated...
+日志：21:06:47.929 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Shutdown completed.
+日志：21:06:53.530 [background-preinit] INFO  o.h.validator.internal.util.Version --- HV000001: Hibernate Validator 8.0.1.Final
+日志：21:06:53.580 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- Starting OnlineShoppingMallApplication using Java 17.0.6 with PID 26560 (E:\NewDeskope\24-25java-web\24-25Javaweb_work\Java_web_WorkHub\期末大作业_网上购物商城\online_shopping_mall\target\classes started by Yu'S'hui'shen in E:\NewDeskope\24-25java-web\24-25Javaweb_work\Java_web_WorkHub\期末大作业_网上购物商城\online_shopping_mall)
+日志：21:06:53.580 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- No active profile set, falling back to 1 default profile: "default"
+日志：21:06:55.165 [restartedMain] INFO  o.a.c.core.AprLifecycleListener --- Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+日志：21:06:55.177 [restartedMain] INFO  o.a.c.core.AprLifecycleListener --- OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+日志：21:06:55.185 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol --- Initializing ProtocolHandler ["http-nio-8080"]
+日志：21:06:55.189 [restartedMain] INFO  o.a.catalina.core.StandardService --- Starting service [Tomcat]
+日志：21:06:55.189 [restartedMain] INFO  o.a.catalina.core.StandardEngine --- Starting Servlet engine: [Apache Tomcat/10.1.28]
+日志：21:06:55.243 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] --- Initializing Spring embedded WebApplicationContext
+日志：21:06:55.550 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper --- HHH000204: Processing PersistenceUnitInfo [name: default]
+日志：21:06:55.624 [restartedMain] INFO  org.hibernate.Version --- HHH000412: Hibernate ORM core version 6.5.2.Final
+日志：21:06:55.662 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator --- HHH000026: Second-level cache disabled
+日志：21:06:56.001 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Starting...
+日志：21:06:56.371 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool --- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3ebff06e
+日志：21:06:56.374 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Start completed.
+日志：21:06:56.426 [restartedMain] WARN  org.hibernate.orm.deprecation --- HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+日志：21:06:56.427 [restartedMain] WARN  org.hibernate.orm.deprecation --- HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+日志：21:06:57.545 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator --- HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+日志：21:06:57.723 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration --- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+日志：21:06:58.461 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol --- Starting ProtocolHandler ["http-nio-8080"]
+日志：21:06:58.488 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- Started OnlineShoppingMallApplication in 5.442 seconds (process running for 6.289)
+日志：21:07:02.697 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] --- Initializing Spring DispatcherServlet 'dispatcherServlet'
+日志：21:08:02.247 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Shutdown initiated...
+日志：21:08:02.254 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Shutdown completed.
+日志：21:08:06.331 [background-preinit] INFO  o.h.validator.internal.util.Version --- HV000001: Hibernate Validator 8.0.1.Final
+日志：21:08:06.372 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- Starting OnlineShoppingMallApplication using Java 17.0.6 with PID 688 (E:\NewDeskope\24-25java-web\24-25Javaweb_work\Java_web_WorkHub\期末大作业_网上购物商城\online_shopping_mall\target\classes started by Yu'S'hui'shen in E:\NewDeskope\24-25java-web\24-25Javaweb_work\Java_web_WorkHub\期末大作业_网上购物商城\online_shopping_mall)
+日志：21:08:06.374 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- No active profile set, falling back to 1 default profile: "default"
+日志：21:08:07.735 [restartedMain] INFO  o.a.c.core.AprLifecycleListener --- Loaded Apache Tomcat Native library [2.0.8] using APR version [1.7.4].
+日志：21:08:07.740 [restartedMain] INFO  o.a.c.core.AprLifecycleListener --- OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+日志：21:08:07.748 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol --- Initializing ProtocolHandler ["http-nio-8080"]
+日志：21:08:07.751 [restartedMain] INFO  o.a.catalina.core.StandardService --- Starting service [Tomcat]
+日志：21:08:07.751 [restartedMain] INFO  o.a.catalina.core.StandardEngine --- Starting Servlet engine: [Apache Tomcat/10.1.28]
+日志：21:08:07.809 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] --- Initializing Spring embedded WebApplicationContext
+日志：21:08:08.068 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper --- HHH000204: Processing PersistenceUnitInfo [name: default]
+日志：21:08:08.120 [restartedMain] INFO  org.hibernate.Version --- HHH000412: Hibernate ORM core version 6.5.2.Final
+日志：21:08:08.151 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator --- HHH000026: Second-level cache disabled
+日志：21:08:08.452 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Starting...
+日志：21:08:08.712 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool --- HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4acd2431
+日志：21:08:08.713 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Start completed.
+日志：21:08:08.748 [restartedMain] WARN  org.hibernate.orm.deprecation --- HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+日志：21:08:08.749 [restartedMain] WARN  org.hibernate.orm.deprecation --- HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+日志：21:08:09.480 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator --- HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+日志：21:08:09.651 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration --- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+日志：21:08:10.359 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol --- Starting ProtocolHandler ["http-nio-8080"]
+日志：21:08:10.386 [restartedMain] INFO  j.o.OnlineShoppingMallApplication --- Started OnlineShoppingMallApplication in 4.463 seconds (process running for 5.167)
+日志：21:08:12.947 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] --- Initializing Spring DispatcherServlet 'dispatcherServlet'
+日志：23:33:38.937 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Shutdown initiated...
+日志：23:33:38.950 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource --- HikariPool-1 - Shutdown completed.

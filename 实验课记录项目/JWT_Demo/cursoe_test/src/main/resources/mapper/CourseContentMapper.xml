@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jdbc.cursoe_test.mapper.CourseContentMapper">
+    <insert id="insert" parameterType="CourseContent" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO course_contents (
+            course_id, title, type, content, sort_order
+        ) VALUES (
+            #{courseId}, #{title}, #{type}, #{content}, #{sortOrder}
+        )
+    </insert>
+    
+    <update id="update" parameterType="CourseContent">
+        UPDATE course_contents
+        SET title = #{title},
+            type = #{type},
+            content = #{content},
+            sort_order = #{sortOrder},
+            update_time = CURRENT_TIMESTAMP
+        WHERE id = #{id}
+    </update>
+    
+    <delete id="delete">
+        DELETE FROM course_contents WHERE id = #{id}
+    </delete>
+    
+    <select id="findById" resultType="CourseContent">
+        SELECT * FROM course_contents WHERE id = #{id}
+    </select>
+    
+    <select id="findByCourseId" resultType="CourseContent">
+        SELECT * FROM course_contents 
+        WHERE course_id = #{courseId}
+        ORDER BY sort_order ASC, create_time ASC
+    </select>
+    
+    <update id="updateSortOrder">
+        UPDATE course_contents 
+        SET sort_order = #{sortOrder},
+            update_time = CURRENT_TIMESTAMP
+        WHERE id = #{id}
+    </update>
+</mapper> 

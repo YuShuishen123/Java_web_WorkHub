@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人资料 - 在线教育平台</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">在线教育平台</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/dashboard.html">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/courses">课程</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/exams">考试</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/profile.html">个人资料</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="logoutBtn">退出</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>个人资料</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="profileForm">
+                            <div class="form-group">
+                                <label for="username">用户名</label>
+                                <input type="text" class="form-control" id="username" name="username" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">邮箱</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="realName">真实姓名</label>
+                                <input type="text" class="form-control" id="realName" name="realName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="role">角色</label>
+                                <input type="text" class="form-control" id="role" name="role" readonly>
+                            </div>
+                            <button type="submit" class="btn btn-primary">保存修改</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>修改密码</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="passwordForm">
+                            <div class="form-group">
+                                <label for="oldPassword">原密码</label>
+                                <input type="password" class="form-control" id="oldPassword" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="newPassword">新密码</label>
+                                <input type="password" class="form-control" id="newPassword" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">确认新密码</label>
+                                <input type="password" class="form-control" id="confirmPassword" required>
+                            </div>
+                            <button type="submit" class="btn btn-warning">修改密码</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // 加载用户信息
+            $.get('/api/user/profile', function(response) {
+                $('#username').val(response.username);
+                $('#email').val(response.email);
+                $('#realName').val(response.realName);
+                $('#role').val(response.role);
+            });
+
+            // 更新个人资料
+            $('#profileForm').on('submit', function(e) {
+                e.preventDefault();
+                $.ajax({
+                    url: '/api/user/profile',
+                    type: 'PUT',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        email: $('#email').val(),
+                        realName: $('#realName').val()
+                    }),
+                    success: function(response) {
+                        alert('个人资料更新成功！');
+                    },
+                    error: function(xhr) {
+                        alert('更新失败：' + xhr.responseJSON.error);
+                    }
+                });
+            });
+
+            // 修改密码
+            $('#passwordForm').on('submit', function(e) {
+                e.preventDefault();
+                if ($('#newPassword').val() !== $('#confirmPassword').val()) {
+                    alert('两次输入的新密码不一致！');
+                    return;
+                }
+                $.ajax({
+                    url: '/api/user/password',
+                    type: 'PUT',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        oldPassword: $('#oldPassword').val(),
+                        newPassword: $('#newPassword').val()
+                    }),
+                    success: function(response) {
+                        alert('密码修改成功！请重新登录');
+                        window.location.href = '/login.html';
+                    },
+                    error: function(xhr) {
+                        alert('修改失败：' + xhr.responseJSON.error);
+                    }
+                });
+            });
+
+            // 退出登录
+            $('#logoutBtn').click(function(e) {
+                e.preventDefault();
+                $.post('/api/auth/logout', function() {
+                    window.location.href = '/login.html';
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

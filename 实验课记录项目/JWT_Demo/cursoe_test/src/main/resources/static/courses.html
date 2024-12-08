@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程列表 - 在线教育平台</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">在线教育平台</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/dashboard.html">首页</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/courses.html">课程</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/exams.html">考试</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/profile.html">个人资料</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="logoutBtn">退出</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <input type="text" class="form-control" id="searchInput" placeholder="搜索课程...">
+            </div>
+            <div class="col-md-6 text-right" id="teacherActions" style="display: none;">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#createCourseModal">创建课程</button>
+            </div>
+        </div>
+
+        <ul class="nav nav-tabs mb-4">
+            <li class="nav-item">
+                <a class="nav-link active" href="#" data-type="all">所有课程</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-type="my">我的课程</a>
+            </li>
+        </ul>
+
+        <div class="row" id="courseList">
+            <!-- 课程列表将通过JavaScript动态加载 -->
+        </div>
+    </div>
+
+    <!-- 创建课程模态框 -->
+    <div class="modal fade" id="createCourseModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">创建新课程</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="createCourseForm">
+                        <div class="form-group">
+                            <label>课程名称</label>
+                            <input type="text" class="form-control" name="title" required>
+                        </div>
+                        <div class="form-group">
+                            <label>课程描述</label>
+                            <textarea class="form-control" name="description" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>最大学生数</label>
+                            <input type="number" class="form-control" name="maxStudents" value="100" required>
+                        </div>
+                        <div class="form-group">
+                            <label>开始时间</label>
+                            <input type="datetime-local" class="form-control" name="startTime" required>
+                        </div>
+                        <div class="form-group">
+                            <label>结束时间</label>
+                            <input type="datetime-local" class="form-control" name="endTime" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="createCourseBtn">创建</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
+    <script>
+        let userRole = '';
+        let currentPage = 1;
+        const pageSize = 10;
+        let loading = false;
+        let courseCache = new Map();
+        
+        $(document).ready(function() {
+            // 获取用户信息和角色
+            $.get('/api/user/profile', function(user) {
+                userRole = user.role;
+                if (userRole === 'ROLE_TEACHER') {
+                    $('#teacherActions').show();
+                }
+            });
+
+            // 加载课程列表
+            loadCourses();
+
+            // 搜索功能
+            $('#searchInput').on('keyup', function() {
+                currentPage = 1;
+                loadCourses($(this).val());
+            });
+
+            // 切换课程列表类型
+            $('.nav-link').click(function(e) {
+                e.preventDefault();
+                $('.nav-link').removeClass('active');
+                $(this).addClass('active');
+                clearCache();
+                loadCourses();
+            });
+
+            // 创建课程
+            $('#createCourseBtn').click(function() {
+                const formData = {};
+                $('#createCourseForm').serializeArray().forEach(item => {
+                    formData[item.name] = item.value;
+                });
+
+                // 确保数值类型字段正确
+                formData.maxStudents = parseInt(formData.maxStudents) || 100;
+                formData.currentStudents = 0;
+                
+                // 处理时间
+                const now = new Date();
+                if (!formData.startTime) {
+                    formData.startTime = now.toISOString();
+                }
+                if (!formData.endTime) {
+                    const endDate = new Date(now);
+                    endDate.setMonth(endDate.getMonth() + 3);
+                    formData.endTime = endDate.toISOString();
+                }
+
+                console.log('Creating course with data:', formData);
+
+                $.ajax({
+                    url: '/api/courses',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(formData),
+                    success: function(response) {
+                        console.log('Course created:', response);
+                        $('#createCourseModal').modal('hide');
+                        clearCache();
+                        loadCourses();
+                        alert('课程创建成功！');
+                    },
+                    error: function(xhr) {
+                        console.error('Course creation failed:', xhr);
+                        alert('创建失败：' + (xhr.responseJSON?.error || xhr.responseText));
+                    }
+                });
+            });
+        });
+
+        function loadCourses(keyword = '') {
+            if (loading) return;
+            loading = true;
+            
+            const type = $('.nav-link.active').data('type');
+            const url = type === 'my' ? '/api/courses/my' : '/api/courses';
+            const cacheKey = `${type}-${keyword}-${currentPage}`;
+            
+            // 检查缓存
+            if (courseCache.has(cacheKey)) {
+                displayCourses(courseCache.get(cacheKey));
+                loading = false;
+                return;
+            }
+            
+            // 显示加载指示器
+            $('#courseList').append('<div class="col-12 text-center" id="loading">加载中...</div>');
+            
+            $.get(url, { 
+                keyword: keyword,
+                page: currentPage,
+                size: pageSize
+            }, function(courses) {
+                $('#loading').remove();
+                
+                // 缓存结果
+                courseCache.set(cacheKey, courses);
+                displayCourses(courses);
+                loading = false;
+            });
+        }
+
+        function displayCourses(courses) {
+            if (currentPage === 1) {
+                $('#courseList').empty();
+            }
+            
+            courses.forEach(course => {
+                $('#courseList').append(createCourseCard(course));
+            });
+            
+            if (courses.length === pageSize) {
+                currentPage++;
+            }
+        }
+
+        // 清除缓存的函数
+        function clearCache() {
+            courseCache.clear();
+            currentPage = 1;
+        }
+
+        function formatDateTime(dateTimeStr) {
+            if (!dateTimeStr) return '未设置';
+            try {
+                // 解析ISO格式的日期字符串
+                const date = new Date(dateTimeStr);
+                if (isNaN(date.getTime())) {
+                    console.log('Invalid date:', dateTimeStr);
+                    return '未设置';
+                }
+                
+                // 使用本地时间格式
+                const options = {
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    hour12: false,
+                    timeZone: 'Asia/Shanghai'
+                };
+                
+                return new Intl.DateTimeFormat('zh-CN', options).format(date);
+            } catch (e) {
+                console.error('Date formatting error:', e);
+                return '未设置';
+            }
+        }
+
+        function createCourseCard(course) {
+            const isStudent = userRole === 'ROLE_STUDENT';
+            const enrollBtn = isStudent ? 
+                `<button class="btn btn-primary btn-sm" onclick="enrollCourse(${course.id})">选课</button>` :
+                '';
+
+            // 确保数值有默认值
+            const currentStudents = course.currentStudents || 0;
+            const maxStudents = course.maxStudents || 100;
+            const teacherName = course.teacherName || '未知';
+
+            return `
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">${course.title}</h5>
+                            <p class="card-text">${course.description}</p>
+                            <p class="card-text">
+                                <small class="text-muted">
+                                    教师：${teacherName}<br>
+                                    学生数：${currentStudents}/${maxStudents}<br>
+                                    开始时间：${formatDateTime(course.startTime)}<br>
+                                    结束时间：${formatDateTime(course.endTime)}
+                                </small>
+                            </p>
+                            <a href="/course-detail.html?id=${course.id}" class="btn btn-info btn-sm">详情</a>
+                            ${enrollBtn}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function enrollCourse(courseId) {
+            $.ajax({
+                url: `/api/courses/${courseId}/select`,
+                type: 'POST',
+                success: function(response) {
+                    alert('选课成功！');
+                    loadCourses();
+                },
+                error: function(xhr) {
+                    alert('选课失败：' + xhr.responseJSON.error);
+                }
+            });
+        }
+
+        // 添加滚动加载
+        $(window).scroll(function() {
+            if ($(window).scrollTop() + $(window).height() >= $(document).height() - 100) {
+                loadCourses($('#searchInput').val());
+            }
+        });
+    </script>
+</body>
+</html> 

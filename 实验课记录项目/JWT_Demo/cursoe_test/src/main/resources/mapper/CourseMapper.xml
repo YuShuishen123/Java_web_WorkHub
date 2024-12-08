@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jdbc.cursoe_test.mapper.CourseMapper">
+    <insert id="insert" parameterType="Course" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO courses (
+            title, description, teacher_id, teacher_name, 
+            status, start_time, end_time, max_students,
+            current_students
+        ) VALUES (
+            #{title}, #{description}, #{teacherId}, #{teacherName},
+            #{status}, #{startTime}, #{endTime}, #{maxStudents},
+            0
+        )
+    </insert>
+    
+    <update id="update" parameterType="Course">
+        UPDATE courses
+        SET title = #{title},
+            description = #{description},
+            status = #{status},
+            start_time = #{startTime},
+            end_time = #{endTime},
+            max_students = #{maxStudents},
+            update_time = CURRENT_TIMESTAMP
+        WHERE id = #{id} AND teacher_id = #{teacherId}
+    </update>
+    
+    <select id="findById" resultType="Course">
+        SELECT id, title, description, teacher_id, teacher_name, 
+               status, start_time, end_time, create_time, update_time,
+               COALESCE(max_students, 100) as max_students,
+               COALESCE(current_students, 0) as current_students
+        FROM courses 
+        WHERE id = #{id}
+    </select>
+    
+    <select id="findByTeacherId" resultType="Course">
+        SELECT /*+ INDEX(courses idx_teacher_id) */
+               id, title, description, teacher_id, teacher_name, 
+               status, start_time, end_time, create_time, update_time,
+               COALESCE(max_students, 100) as max_students,
+               COALESCE(current_students, 0) as current_students
+        FROM courses 
+        WHERE teacher_id = #{teacherId}
+        ORDER BY create_time DESC
+    </select>
+    
+    <select id="findAll" resultType="Course">
+        SELECT 
+            id, 
+            title, 
+            description, 
+            teacher_id, 
+            COALESCE(teacher_name, '未知') as teacher_name,
+            status, 
+            COALESCE(start_time, CURRENT_TIMESTAMP) as start_time,
+            COALESCE(end_time, DATE_ADD(CURRENT_TIMESTAMP, INTERVAL 3 MONTH)) as end_time,
+            create_time, 
+            update_time,
+            COALESCE(max_students, 100) as max_students,
+            COALESCE(current_students, 0) as current_students
+        FROM courses
+        <where>
+            <if test="keyword != null and keyword != ''">
+                AND (title LIKE CONCAT('%', #{keyword}, '%')
+                OR description LIKE CONCAT('%', #{keyword}, '%'))
+            </if>
+        </where>
+        ORDER BY create_time DESC
+        LIMIT #{offset}, #{limit}
+    </select>
+    
+    <update id="updateCurrentStudents">
+        UPDATE courses 
+        SET current_students = current_students + #{increment}
+        WHERE id = #{courseId}
+    </update>
+    
+    <select id="findByStudentId" resultType="Course">
+        SELECT /*+ INDEX(cs idx_student_id) */ c.* 
+        FROM courses c
+        LEFT JOIN course_selections cs ON c.id = cs.course_id
+        WHERE cs.student_id = #{studentId}
+        ORDER BY cs.create_time DESC
+    </select>
+</mapper> 
